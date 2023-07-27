@@ -1,1 +1,126 @@
-Hello World
+<!DOCTYPE html >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Lisa Utsett's Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="">
+            <ul>
+                <li><a href="#section-1">About</a></li>
+                <li><a href="#section-2">Resume</a></li>
+                <li><a href="#section-3">Projects</a></li>
+                <li><a href="#section-4">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SIDE NAV BAR -->
+    <div id="mySidebar" class="sidebar">
+        <button href="javascript:void(0)" id="closebtn" class="closebtn">×</button>
+        <a href="#section-1">About</a>
+        <a href="#section-2">Resume</a>
+        <a href="#section-3">Projects</a>
+        <a href="#section-4">Contact</a>
+      </div>
+
+  
+
+    
+    <!-- MAIN -->
+    <main id="main">  
+        <div>
+            <button id="openbtn" class="openbtn"">☰ MENU</button>
+        </div>
+        <!-- ABOUT -->
+        <section id="section-1" class="about outer-section">
+            <img class="avatar hidden" src="images/Untitled design (7).gif">
+            <div class="text">  
+                <div class="h1-container"> 
+                <h1 id="welcome-banner" class="text_shadows"></h1>  
+                </div>     
+                <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></em>
+                    <div class="icons">
+                        <a target="_blank" href="https://www.linkedin.com/in/lisa-utsett-3319371b8">
+                            <img class="icon" src="images/icons8-linkedin-200 (9).png">
+                        </a>
+                        <a target="_blank" href="https://github.com/lisabethu88">
+                            <img class="icon" src="images/icons8-github-200 (7).png">
+                        </a>
+                    </div>
+                </div>
+            <img class="avatar" src="images/Untitled design (7).gif">
+        </section>
+
+        <!-- RESUME -->
+        <section id="section-2" class="outer-section reveal">
+            <h2>Resume</h2>
+            <div  class="section">
+                <div class="text">
+                    <object class="resume-object" data="files/01 Exponents.pdf" type="application/pdf" width="100%" height="1000px%">
+                        <p>Unable to display PDF file. <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">Download</a> instead.</p>
+                    </object>
+                    </div>
+                </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="section-3" class="outer-section reveal">
+            <h2>Projects</h2>
+            <div class="section">
+                <div class="text">
+                    <div class="project-row">
+                        <h3>Russian Rougette</h3>
+                        <div>
+                            <p>I am HUGELY passionate about makeup! So I thought it would be neat to create an eyeshadow visualizer.</p>
+                            <a href="https://russianrougette.com/"><img class="project-img" src="images/Screen Shot 2023-07-25 at 3.52.44 PM.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <!-- CONTACT -->
+        <section id="section-4" class="outer-section contact reveal">
+            <h2>Contact</h2>
+            <div class="section">
+                <div class="text">
+                   <div class="contact-row">
+                    <img src="images/icons8-phone-message-96 (1).png"/>
+                    <p>(518)-812-5731</p>
+                   </div>
+                   <div class="contact-row">
+                    <img src="images/icons8-email-96 (1).png"/>
+                    <p>lisabethutsett@gmail.com</p>
+                   </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- <p>&copy;2023 Lisa Utsett</p> -->
+    </footer>
+
+    <!-- JS SCRIPT --> 
+    <script src="index.js"></script>
+    
+
+   
+    
+
+  </body>
+</html>
