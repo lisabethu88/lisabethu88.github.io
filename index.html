@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible">
     <title>Lisa Utsett's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico"/>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -38,29 +39,35 @@
         <div>
             <button id="openbtn" class="openbtn"">☰ MENU</button>
         </div>
-        <!-- ABOUT -->
-        <section id="section-1" class="about outer-section">
-            <img class="avatar hidden" src="images/Untitled design (7).gif">
-            <div class="text">  
-                <div class="h1-container"> 
-                <h1 id="welcome-banner" class="text_shadows"></h1>  
-                </div>     
-                <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
-                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></em>
-                    <div class="icons">
-                        <a target="_blank" href="https://www.linkedin.com/in/lisa-utsett-3319371b8">
-                            <img class="icon" src="images/icons8-linkedin-200 (9).png">
-                        </a>
-                        <a target="_blank" href="https://github.com/lisabethu88">
-                            <img class="icon" src="images/icons8-github-200 (7).png">
-                        </a>
-                    </div>
-                </div>
+
+        <div class="h1-container"> 
+            <img class="avatar hidden" src="images/Untitled design (7).gif"> 
+            <div class="h1-and-icons">
+            <h1 id="welcome-banner" class="text_shadows"></h1> 
+            <div class="icons">
+                <a target="_blank" href="https://www.linkedin.com/in/lisa-utsett-3319371b8">
+                    <img class="icon" src="images/icons8-linkedin-200 (9).png">
+                </a>
+                <a target="_blank" href="https://github.com/lisabethu88">
+                    <img class="icon" src="images/icons8-github-200 (7).png">
+                </a>
+            </div>
+            </div>
             <img class="avatar" src="images/Untitled design (7).gif">
+  
+        </div>     
+
+        <!-- ABOUT -->
+        <section id="section-1" class="about outer-section reveal">
+            <h2>About</h2>
+            <div  class="section">
+            <div class="text">  
+                <p>
+                I'm a junior frontend developer with a creative flair and a keen eye for detail. I love crafting beautiful and intuitive user experiences that bring ideas to life on the web. My journey as a developer began with a fascination for technology and a desire to build things that make a difference. Over the years, I have honed my skills in frontend development, constantly striving to stay up-to-date with the latest trends and technologies. As a frontend developer, I specialize in turning design mockups and wireframes into fully functional, responsive websites. I am well-versed in HTML, CSS, JavaScript, and React, and I take pride in writing clean and efficient code. The ability to blend creativity with technical skills is what attracts me the most to frontend development. Being able to bridge the gap between design and implementation allows me to bring imaginative concepts to reality, while ensuring a seamless and enjoyable user experience. Collaboration is key to my development process. I believe in effective communication and working closely with designers, backend developers, and stakeholders to bring projects to fruition. I enjoy tackling challenges head-on and am always eager to learn from new experiences. I'm excited about the opportunity to work on innovative projects and collaborate with fellow developers and designers. If you have a project in mind or just want to say hi, feel free to reach out to me through the contact form on my portfolio.
+                Thank you for visiting my page, and I look forward to connecting with you!
+                </p>
+                </div>
+            </div>
         </section>
 
         <!-- RESUME -->
@@ -69,15 +76,15 @@
             <div  class="section">
                 <div class="text">
                     <object class="resume-object" data="files/01 Exponents.pdf" type="application/pdf" width="100%" height="1000px%">
-                        <p>Unable to display PDF file. <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">Download</a> instead.</p>
                     </object>
+                    <p class="resume-message">View resume <a target="_blank" href="files/01 Exponents.pdf"><b>here</b></a>.</p>
                     </div>
                 </div>
         </section>
 
         <!-- PROJECTS -->
         <section id="section-3" class="outer-section reveal">
-            <h2>Projects</h2>
+            <h2>Portfolio</h2>
             <div class="section">
                 <div class="text">
                     <div class="project-row">
@@ -107,6 +114,9 @@
                 </div>
             </div>
         </section>
+
+        <button id="backToTopBtn" title="Back to Top">⇧</button>
+
     </main>
 
 

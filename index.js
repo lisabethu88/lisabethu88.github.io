@@ -24,9 +24,6 @@ window.addEventListener("scroll", event => {
     });
   });
 
-/*   window.addEventListener("scroll", () => {
-    _.throttle(doThatStuff, 100);
-  }); */
 
 /*CREDIT: Alleto Trigo https://alletotrigo.com/blog/css-animations-scroll/*/
   function reveal() {
@@ -50,7 +47,7 @@ window.addEventListener("scroll", event => {
 // CREDIT: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
 let i = 0;
 let txt = "Hi, I'm Lisa! Welcome to my portfolio.";
-let speed = 70;
+let speed = 50;
 let welcomeBanner = document.getElementById("welcome-banner");
 
 function typeWriter() {
@@ -62,7 +59,7 @@ function typeWriter() {
     }
     welcomeBanner.innerHTML += txt.charAt(i);
     if(i === 12){
-      document.getElementById("welcome-banner").innerHTML += '</span>';
+      document.getElementById("welcome-banner").innerHTML += '</span><br/>';
       welcomeBanner = document.getElementById("welcome-banner");
     }
     i++;
@@ -92,3 +89,20 @@ openButton.addEventListener('click', openNav);
 const closeButton = document.getElementById('closebtn');
 closeButton.addEventListener('click', closeNav);
 
+ // Get the button element
+ var backToTopBtn = document.getElementById("backToTopBtn");
+
+ // Show the button when the user scrolls down 200px from the top of the document
+ window.onscroll = function () {
+   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+     backToTopBtn.style.display = "block";
+   } else {
+     backToTopBtn.style.display = "none";
+   }
+ };
+
+ // Scroll back to the top when the button is clicked
+ backToTopBtn.addEventListener("click", function () {
+   document.body.scrollTop = 0; // For Safari
+   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+ });
