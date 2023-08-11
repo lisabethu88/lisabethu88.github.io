@@ -633,8 +633,8 @@ nav ul li a.current {
     width: 40px;
     height: 40px;
     border: none;
-    background-color: #f1f1f1; /* Replace with your desired background color */
-    color: #313f46; /* Replace with your desired text color */
+    background-color: transparent;
+    color: #f1f1f1; /* Replace with your desired text color */
     font-size: 24px;
     border-radius: 50%;
     cursor: pointer;
@@ -776,6 +776,7 @@ h3 {
     text-align: center;
     letter-spacing: 3px;
     font-weight: 400;
+    text-decoration: underline;
 }
 
 #languages {
