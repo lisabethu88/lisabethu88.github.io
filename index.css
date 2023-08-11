@@ -18,6 +18,12 @@ body{
     font-weight: 200;
 }
 
+@media (max-width: 768px) {
+    body {
+        background-repeat: repeat-y;
+    }
+  }
+
 header {
     width: 100vw;
     position: fixed;
