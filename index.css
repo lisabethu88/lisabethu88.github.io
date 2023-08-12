@@ -282,13 +282,12 @@ footer {
     display: none;
     font-weight: 700;
     border-radius: 15px;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     cursor: pointer;
 }
 
 .openbtn:hover {
-    background-image: url('./images/Screen Shot 2023-07-26 at 11.17.25 AM.png');
-    background-size: cover;
+    background-color: transparent;
     border: 3px solid white;
     color:white;
 }
