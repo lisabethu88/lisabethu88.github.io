@@ -271,6 +271,10 @@ footer {
     cursor: pointer;
 } 
 
+.openbtn-container {
+    margin-bottom: 5%;
+}
+
 .openbtn {
     font-size: 20px;
     cursor: pointer;
