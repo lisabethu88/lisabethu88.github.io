@@ -119,7 +119,13 @@ const ProfileTabs = ({ darkMode }: ProfileTabsProps) => {
 
   return (
     <Box
-      sx={{ width: "100%", maxWidth: 800, height: "100%", overflowY: "scroll" }}
+      sx={{
+        width: "100%",
+        maxWidth: 800,
+        height: "100%",
+        overflowY: "scroll",
+        margin: 1,
+      }}
     >
       <Box>
         <Tabs
