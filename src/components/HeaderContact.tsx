@@ -1,15 +1,21 @@
-import { Box, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import React from "react";
+import { darkMauve, gold, lightSage } from "../constants.ts";
 interface HeaderContactProps {
-  headerTextColor: string;
+  darkMode: boolean;
   icon: React.ReactNode;
   link: string;
 }
-const HeaderContact = ({ headerTextColor, icon, link }) => {
+const HeaderContact = ({ darkMode, icon, link }: HeaderContactProps) => {
   return (
     <IconButton
       href={link}
-      sx={{ my: { xs: 0, md: 2 }, color: headerTextColor, display: "block" }}
+      sx={{
+        my: { xs: 0, md: 2 },
+        color: darkMode ? lightSage : darkMauve,
+        display: "block",
+        padding: 0,
+      }}
     >
       {icon}
     </IconButton>

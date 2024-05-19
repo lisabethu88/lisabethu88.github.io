@@ -5,85 +5,76 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { Avatar } from "@mui/material";
+import { Avatar, Tooltip } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { useState, useEffect } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import HeaderContact from "./HeaderContact.tsx";
+import {
+  darkBlue,
+  darkMauve,
+  gold,
+  headingFont,
+  lightSage,
+  medMauve,
+} from "../constants.ts";
+interface HeaderProps {
+  handleSetMode: () => void;
+  darkMode: boolean;
+}
 const pagesInfo = [
   {
     icon: (
-      <GitHubIcon
-        sx={{
-          height: { xs: 30, md: 50 },
-          width: { xs: 30, md: 50 },
-          margin: 1,
-        }}
-      />
+      <Tooltip title="GitHub">
+        <GitHubIcon
+          sx={{
+            height: { xs: 30, md: 50 },
+            width: { xs: 30, md: 50 },
+            margin: 1,
+          }}
+        />
+      </Tooltip>
     ),
     link: "https://github.com/lisabethu88",
   },
   {
     icon: (
-      <LinkedInIcon
-        sx={{
-          height: { xs: 30, md: 50 },
-          width: { xs: 30, md: 50 },
-          margin: 1,
-        }}
-      />
+      <Tooltip title="LinkedIn">
+        <LinkedInIcon
+          sx={{
+            height: { xs: 30, md: 50 },
+            width: { xs: 30, md: 50 },
+            margin: 1,
+          }}
+        />
+      </Tooltip>
     ),
     link: "https://www.linkedin.com/in/lisa-utsett-3319371b8/",
   },
   {
     icon: (
-      <EmailIcon
-        sx={{
-          height: { xs: 30, md: 50 },
-          width: { xs: 30, md: 50 },
-          margin: 1,
-        }}
-      />
+      <Tooltip title="Email">
+        <EmailIcon
+          sx={{
+            height: { xs: 30, md: 50 },
+            width: { xs: 30, md: 50 },
+            margin: 1,
+          }}
+        />
+      </Tooltip>
     ),
     link: "mailto:lisabethutsett@gmail.com",
   },
 ];
-const Header = () => {
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-  const [darkMode, setDarkMode] = useState(false);
-  const handleSetMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  const darkColor = "#334c5b";
-  const lightColor = "#d4d2c6";
-  const [headerBGColor, setHeaderBGColor] = useState(lightColor);
-  const [headerTextColor, setHeaderTextColor] = useState(darkColor);
-
-  useEffect(() => {
-    if (darkMode) {
-      setHeaderBGColor(darkColor);
-      setHeaderTextColor(lightColor);
-    } else {
-      setHeaderBGColor(lightColor);
-      setHeaderTextColor(darkColor);
-    }
-  }, [darkMode]);
+const Header = ({ handleSetMode, darkMode }: HeaderProps) => {
   return (
     <AppBar
-      position="fixed"
+      position={"relative"}
       sx={{
-        backgroundColor: headerBGColor,
-        color: headerTextColor,
+        backgroundColor: "transparent",
+        color: "#cdb227",
       }}
     >
       <Container maxWidth="xl">
@@ -91,7 +82,6 @@ const Header = () => {
           disableGutters
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
             margin: { xs: 2, md: 0 },
           }}
         >
@@ -100,7 +90,8 @@ const Header = () => {
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
-              paddingTop: { xs: "16px", md: 0 },
+              // paddingTop: { xs: "16px", md: 0 },
+              gap: { xs: 0, md: 2 },
             }}
           >
             <Avatar
@@ -108,27 +99,28 @@ const Header = () => {
                 mr: 1,
                 width: { xs: 30, md: 50 },
                 height: { xs: 30, md: 50 },
-                border: "2px solid",
               }}
               src="../avatar.jpeg"
             />
+
             <Typography
               variant="h6"
               noWrap={false}
               component="a"
               sx={{
                 display: { xs: "flex" },
-                fontFamily: "monospace",
+                fontFamily: headingFont,
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "inherit",
+                color: darkMode ? lightSage : darkMauve,
                 textDecoration: "none",
-                fontSize: "1.5rem",
+                fontSize: { xs: "1.1rem", md: "2rem" },
                 textAlign: { xs: "left", md: "left" },
+                textTransform: "capitalize",
               }}
             >
               Lisa Utsett
-            </Typography>{" "}
+            </Typography>
           </Box>
 
           <Box
@@ -143,39 +135,43 @@ const Header = () => {
               return (
                 <HeaderContact
                   key={index}
-                  headerTextColor={headerTextColor}
+                  darkMode={darkMode}
                   icon={pageInfo.icon}
                   link={pageInfo.link}
                 />
               );
             })}
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleSetMode}
-              color="inherit"
-              sx={{ my: { xs: 0, md: 2 } }}
+            <Tooltip
+              title={darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
             >
-              {!darkMode ? (
-                <LightModeIcon
-                  sx={{
-                    height: { xs: 30, md: 50 },
-                    width: { xs: 30, md: 50 },
-                    margin: 1,
-                  }}
-                />
-              ) : (
-                <DarkModeIcon
-                  sx={{
-                    height: { xs: 30, md: 50 },
-                    width: { xs: 30, md: 50 },
-                    margin: 1,
-                  }}
-                />
-              )}
-            </IconButton>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleSetMode}
+                sx={{
+                  my: { xs: 0, md: 2 },
+                  color: darkMode ? lightSage : darkMauve,
+                }}
+              >
+                {!darkMode ? (
+                  <LightModeIcon
+                    sx={{
+                      height: { xs: 30, md: 50 },
+                      width: { xs: 30, md: 50 },
+                    }}
+                  />
+                ) : (
+                  <DarkModeIcon
+                    sx={{
+                      height: { xs: 30, md: 50 },
+                      width: { xs: 30, md: 50 },
+                    }}
+                  />
+                )}
+              </IconButton>
+            </Tooltip>
           </Box>
         </Toolbar>
       </Container>
