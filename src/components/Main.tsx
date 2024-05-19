@@ -30,12 +30,13 @@ const Main = ({ darkMode }: MainProps) => {
         },
         paddingBottom: { xs: "150px", lg: 0 },
         bgcolor: darkMode ? darkBlue : medMauve,
+        minHeight: "fit-content",
         height: "100%",
         width: "100%",
         justifyContent: "center",
         alignItems: "flex-start",
         flexWrap: { xs: "wrap", lg: "nowrap" },
-        overflow: "scroll",
+        // overflowY: "scroll",
         gap: { xs: 1, lg: 5 },
       }}
     >

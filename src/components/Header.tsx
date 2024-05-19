@@ -71,9 +71,9 @@ const pagesInfo = [
 const Header = ({ handleSetMode, darkMode }: HeaderProps) => {
   return (
     <AppBar
-      position={"relative"}
+      position={"sticky"}
       sx={{
-        backgroundColor: "transparent",
+        backgroundColor: darkMode ? darkBlue : medMauve,
         color: "#cdb227",
       }}
     >
