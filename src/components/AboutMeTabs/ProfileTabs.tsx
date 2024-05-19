@@ -118,7 +118,9 @@ const ProfileTabs = ({ darkMode }: ProfileTabsProps) => {
   };
 
   return (
-    <Box sx={{ width: "100%", maxWidth: 800, margin: 2, height: "100%" }}>
+    <Box
+      sx={{ width: "100%", maxWidth: 800, height: "100%", overflowY: "scroll" }}
+    >
       <Box>
         <Tabs
           value={value}
@@ -129,11 +131,12 @@ const ProfileTabs = ({ darkMode }: ProfileTabsProps) => {
             display: "flex",
             justifyContent: "center",
             backgroundColor: darkMode ? darkBlue : medMauve,
-            width: "fit-content",
+            width: "100%",
             borderTopLeftRadius: 5,
           }}
           variant="scrollable"
           scrollButtons="auto"
+          allowScrollButtonsMobile={true}
         >
           {tabLabels.map((tabLabel, index) => (
             <Tab
