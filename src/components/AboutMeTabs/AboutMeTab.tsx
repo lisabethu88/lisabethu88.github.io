@@ -42,35 +42,37 @@ const AboutMeTab = ({ darkMode }: AboutMeTabProps) => {
             fontFamily={headingFont}
             fontSize={30}
             letterSpacing={4}
-            marginTop={1}
+            margin={1}
           >
             Welcome!
           </Typography>{" "}
         </Box>
-        {/* <Chip
-          label="Software Engineer | Front End Web Developer"
+        <Chip
+          label="Software Engineer | Front End Developer"
           sx={{
             margin: 1,
-            backgroundColor: darkMode ? lightSage : darkMauve,
-            color: darkMode ? darkBlue : cream,
+            backgroundColor: darkMode ? lightSage : medMauve,
+            color: darkMode ? darkBlue : darkMauve,
             fontFamily: bodyFont,
             fontSize: ".8rem",
             borderRadius: 10,
             fontWeight: 500,
           }}
-        /> */}
+        />
         <Typography
-          padding={3}
+          padding={2}
           fontFamily={bodyFont}
           color={darkMode ? cream : darkMauve}
         >
-          My name is Lisa Utsett and I am a Software Engineer and Front End
-          Developer based in the Hudson Valley. Coding isn't just a job for me;
-          it's something I genuinely enjoy, and I find fulfillment in learning
-          and the creative problem-solving it involves. I'm committed to being a
-          reliable team member and thrive in collaborative environments, where I
-          can contribute positively and work effectively with others to achieve
-          our goals.
+          My name is Lisa Utsett and I am a passionate developer based in Hudson
+          Valley, NY. Coding isn't just a job for me; it's something I genuinely
+          enjoy, and I find fulfillment in learning and the creative
+          problem-solving it involves. I'm committed to being a reliable team
+          member and thrive in collaborative environments, where I can
+          contribute positively and work effectively with others to achieve our
+          goals. I'm always looking for ways to improve my skills and learn new
+          technologies, and I'm excited to see where my journey in tech will
+          take me.
         </Typography>
         <Box sx={{ paddingY: 3 }}>
           <Typography

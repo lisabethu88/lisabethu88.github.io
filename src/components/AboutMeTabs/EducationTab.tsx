@@ -1,22 +1,32 @@
 import { Box, List, ListItem, ListItemText, ListItemIcon } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import SchoolIcon from "@mui/icons-material/School";
+import React from "react";
+
 import {
   darkMauve,
   cream,
   gray,
-  medMauve,
-  black,
-  forestGreen,
-  gold,
   lightSage,
   headingFont,
+  gold,
+  forestGreen,
+  lightMauve,
 } from "../../constants.ts";
 interface AboutMeTabProps {
   darkMode: boolean;
 }
 
 const EducationTab = ({ darkMode }: AboutMeTabProps) => {
+  const imgStyles = {
+    maxWidth: "200px",
+    width: "100%",
+    margin: "20px",
+    transition: "transform 300ms ease-in-out",
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: "auto",
+    marginRight: "auto",
+    borderRadius: "0.375rem",
+  };
   return (
     <Box
       sx={{
@@ -87,6 +97,29 @@ const EducationTab = ({ darkMode }: AboutMeTabProps) => {
             }}
           />
         </ListItem>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 2,
+            flexWrap: "wrap",
+          }}
+        >
+          <a target="_blank" href="../degree.JPG">
+            <img
+              src="../degree.JPG"
+              alt="SUNY Adirondack degree"
+              style={imgStyles}
+            />
+          </a>
+          <a target="_blank" href="../adacertificate.png">
+            <img
+              src="../adacertificate.png"
+              alt="Ada Developers Academy certificate"
+              style={imgStyles}
+            />
+          </a>
+        </Box>
       </List>
     </Box>
   );
