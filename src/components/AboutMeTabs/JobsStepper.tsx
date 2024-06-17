@@ -16,7 +16,7 @@ import {
   white,
   headingFont,
 } from "../../constants.ts";
-import { jobsData } from "../../data.ts";
+import { jobsData } from "../../data/data.ts";
 import { IJobData } from "../../interfaces/IJobData.ts";
 import JobSlide from "./JobSlide.tsx";
 

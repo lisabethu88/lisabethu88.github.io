@@ -1,6 +1,6 @@
 import { Box, Typography, Chip } from "@mui/material";
 import React from "react";
-import { skills } from "../../data.ts";
+import { skills } from "../../data/data.ts";
 import {
   forestGreen,
   darkMauve,

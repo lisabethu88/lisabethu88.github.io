@@ -13,7 +13,7 @@ import {
   lightSage,
   headingFont,
 } from "../../constants.ts";
-import { jobsData, projectsData } from "../../data.ts";
+import { jobsData, projectsData } from "../../data/data.ts";
 import ProjectSlide from "./ProjectSlide.tsx";
 
 interface ProjectsStepperProps {

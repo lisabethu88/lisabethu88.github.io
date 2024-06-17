@@ -63,11 +63,20 @@ const ProjectSlide = ({
           );
         })}
       </Box>
-      <img
-        src={imgPath}
-        alt="project gif"
-        className="max-w-[400px] w-full mx-auto my-0 rounded"
-      />
+      <Box
+        sx={{
+          width: "100%",
+          margin: "5px auto",
+          justifyContent: "center",
+          display: "flex",
+        }}
+      >
+        <img
+          src={imgPath}
+          alt="project gif"
+          className="rounded max-w-[400px]"
+        />
+      </Box>
       {/* <Button
         sx={{
           fontFamily: bodyFont,
