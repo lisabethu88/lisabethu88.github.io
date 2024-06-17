@@ -1,5 +1,5 @@
-import { IJobData } from "./interfaces/IJobData";
-import { IProjectData } from "./interfaces/IProjectData";
+import { IJobData } from "../interfaces/IJobData";
+import { IProjectData } from "../interfaces/IProjectData";
 
 export const russianRougetteProjectData = {
   techStack: [
@@ -18,7 +18,7 @@ export const russianRougetteProjectData = {
   ],
   title: "Russian Rougette",
   description: "Eyeshadow Visualizer",
-  imgPath: "../rr.gif",
+  imgPath: "../ezgif-7-d5a326020e.gif",
   githubLink: "https://github.com/lisabethu88/russian-rougette",
   demoLink: "https://russianrougette.com/",
 } as IProjectData;
