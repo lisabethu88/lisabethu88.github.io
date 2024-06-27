@@ -69,12 +69,13 @@ const ProjectSlide = ({
           margin: "5px auto",
           justifyContent: "center",
           display: "flex",
+          marginY: 3,
         }}
       >
         <img
           src={imgPath}
-          alt="project gif"
-          className="rounded max-w-[400px]"
+          alt="project screenshot"
+          className="rounded max-w-[400px] border-2 border-gray-300"
         />
       </Box>
       {/* <Button

@@ -1,7 +1,7 @@
 import { IJobData } from "../interfaces/IJobData";
 import { IProjectData } from "../interfaces/IProjectData";
 
-export const russianRougetteProjectData = {
+const russianRougetteProjectData = {
   techStack: [
     "Python",
     "JavaScript",
@@ -23,7 +23,7 @@ export const russianRougetteProjectData = {
   demoLink: "https://russianrougette.com/",
 } as IProjectData;
 
-export const inspirationBoardProjectData = {
+const inspirationBoardProjectData = {
   techStack: [
     "Python",
     "JavaScript",
@@ -46,13 +46,31 @@ export const inspirationBoardProjectData = {
   demoLink: "https://inspiration-board-5f485eb163e1.herokuapp.com/",
 } as IProjectData;
 
-export const rockPaperScissorsProjectData = {
+const rockPaperScissorsProjectData = {
   techStack: ["JavaScript", "CSS", "HTML", "React", "Heroku"],
   title: "Rock, Paper, Scissors",
   description: "Rock, Paper, Scissors game",
   imgPath: "../ezgif-3-eed127bf7a.gif",
   githubLink: "",
   demoLink: "https://rock--paper--scissors-18922ab6f1c9.herokuapp.com/",
+} as IProjectData;
+
+const devHeavenProjectData = {
+  techStack: [
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "React",
+    "MUI",
+    "Commerce.js",
+    "Stripe",
+    "Vercel",
+  ],
+  title: "Dev Heaven",
+  description: "E-commerce site",
+  imgPath: "../Screenshot 2024-06-27 at 11.06.53 AM.png",
+  githubLink: "",
+  demoLink: "https://dev-heaven.vercel.app/",
 } as IProjectData;
 
 export const skills = [
@@ -118,6 +136,7 @@ export const jobsData: IJobData[] = [
 
 export const projectsData: IProjectData[] = [
   russianRougetteProjectData,
+  devHeavenProjectData,
   inspirationBoardProjectData,
   rockPaperScissorsProjectData,
 ];

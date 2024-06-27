@@ -13,7 +13,7 @@ import {
   lightSage,
   headingFont,
 } from "../../constants.ts";
-import { jobsData, projectsData } from "../../data/data.ts";
+import { projectsData } from "../../data/data.ts";
 import ProjectSlide from "./ProjectSlide.tsx";
 
 interface ProjectsStepperProps {
@@ -24,7 +24,7 @@ const ProjectsStepper = ({ darkMode }: ProjectsStepperProps) => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
-  const maxSteps = jobsData.length;
+  const maxSteps = projectsData.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
