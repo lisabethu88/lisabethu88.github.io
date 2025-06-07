@@ -120,3 +120,7 @@ code {
 .MuiListItemText-secondary > span {
   flex-wrap: wrap;
 }
+
+#self-portrait {
+  border-radius: 50%;
+}

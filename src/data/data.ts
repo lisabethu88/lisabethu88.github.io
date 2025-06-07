@@ -73,6 +73,24 @@ const devHeavenProjectData = {
   demoLink: "https://dev-heaven.vercel.app/",
 } as IProjectData;
 
+const recipeProjectData = {
+  techStack: [
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "React",
+    "MUI",
+    "Vercel",
+    "OpenAI",
+    "Spoonacular API",
+  ],
+  title: "Just the Effing Recipe",
+  description: "No-nonsense Recipe Finder",
+  imgPath: "../Screenshot 2025-06-07 at 7.37.11 PM.png",
+  githubLink: "",
+  demoLink: "https://just-the-effing-recipe.vercel.app/",
+} as IProjectData;
+
 export const skills = [
   "Javascript",
   "HTML",
@@ -117,13 +135,13 @@ export const jobsData: IJobData[] = [
   {
     title: "Lead Front End Developer",
     company: "To The She Power",
-    date: "10 / 2023 - Present",
+    date: "10/2023 - 01/2025",
     listItems: hypeHerListItems,
   },
   {
     title: "Front End Developer",
     company: "SquareHook",
-    date: "01/2021 - 06/2021",
+    date: "07/2023 - 09/2023",
     listItems: squarehookListItems,
   },
   {
@@ -136,6 +154,7 @@ export const jobsData: IJobData[] = [
 
 export const projectsData: IProjectData[] = [
   russianRougetteProjectData,
+  recipeProjectData,
   devHeavenProjectData,
   inspirationBoardProjectData,
   rockPaperScissorsProjectData,

@@ -1,4 +1,4 @@
-import { Card, Typography, Chip, Button, Box } from "@mui/material";
+import { Typography, Chip, Button, Box } from "@mui/material";
 import React from "react";
 import { IProjectData } from "../../interfaces/IProjectData.ts";
 import {

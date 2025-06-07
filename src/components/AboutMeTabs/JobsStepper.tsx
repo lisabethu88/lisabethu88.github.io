@@ -40,9 +40,6 @@ const JobsStepper = ({ darkMode }: JobsStepperProps) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Box sx={{ width: "100%", minHeight: "375px" }}>
-        <JobSlide darkMode={darkMode} jobData={jobsData[activeStep]} />
-      </Box>
       <MobileStepper
         variant="text"
         steps={maxSteps}
@@ -99,7 +96,10 @@ const JobsStepper = ({ darkMode }: JobsStepperProps) => {
             Back
           </Button>
         }
-      />
+      />{" "}
+      <Box sx={{ width: "100%", minHeight: "375px" }}>
+        <JobSlide darkMode={darkMode} jobData={jobsData[activeStep]} />
+      </Box>
     </Box>
   );
 };

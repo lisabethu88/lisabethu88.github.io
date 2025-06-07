@@ -15,7 +15,6 @@ import HeaderContact from "./HeaderContact.tsx";
 import {
   darkBlue,
   darkMauve,
-  gold,
   headingFont,
   lightSage,
   medMauve,
@@ -100,7 +99,10 @@ const Header = ({ handleSetMode, darkMode }: HeaderProps) => {
                 width: { xs: 30, md: 50 },
                 height: { xs: 30, md: 50 },
               }}
-              src="../avatar.jpeg"
+              src={
+                darkMode ? "../pet-logo-dark-3.png" : "../pet-logo-light-3.png"
+              }
+              alt="Logo of two dogs and a cat"
             />
 
             <Typography

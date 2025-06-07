@@ -1,14 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
 import JobsStepper from "./JobsStepper.tsx";
-import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import {
-  darkGreen,
-  forestGreen,
-  medMauve,
-  lightSage,
-  gold,
-} from "../../constants.ts";
 interface ExperienceTabProps {
   darkMode: boolean;
 }

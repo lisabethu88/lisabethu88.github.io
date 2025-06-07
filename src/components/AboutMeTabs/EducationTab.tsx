@@ -7,9 +7,6 @@ import {
   gray,
   lightSage,
   headingFont,
-  gold,
-  forestGreen,
-  lightMauve,
 } from "../../constants.ts";
 interface AboutMeTabProps {
   darkMode: boolean;
@@ -41,8 +38,67 @@ const EducationTab = ({ darkMode }: AboutMeTabProps) => {
         <ListItem>
           <ListItemIcon>
             <img
+              src="../sunyempirelogo.jpg"
+              className="w-[60px] rounded-full mr-2 border-2 border-white border-solid"
+              alt="suny empire logo"
+            />
+          </ListItemIcon>
+          <ListItemText
+            primary="SUNY Empire, Saratoga Springs, NY"
+            secondary={
+              <>
+                <span className="flex justify-between w-full">
+                  Bachelors of Science in Computer Science{" "}
+                  <span>2024 - Now</span>
+                </span>
+                <label>4.0 GPA</label>
+              </>
+            }
+            primaryTypographyProps={{
+              fontFamily: headingFont,
+              fontWeight: "bold",
+              color: darkMode ? lightSage : darkMauve,
+              textTransform: "uppercase",
+            }}
+            secondaryTypographyProps={{
+              fontFamily: headingFont,
+              color: darkMode ? cream : gray,
+            }}
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <img
+              className="w-[60px] rounded-full mr-2 border-2 border-white border-solid"
+              src="../adabadge.png"
+              alt="ada certificate badge"
+            />
+          </ListItemIcon>
+          <ListItemText
+            primary="Ada Developers Academy, Seattle, WA"
+            secondary={
+              <span className="flex justify-between w-full">
+                Certificate of Achievement
+                <span>2022 - 2023</span>
+              </span>
+            }
+            primaryTypographyProps={{
+              fontFamily: headingFont,
+              fontWeight: "bold",
+              color: darkMode ? lightSage : darkMauve,
+              textTransform: "uppercase",
+            }}
+            secondaryTypographyProps={{
+              fontFamily: headingFont,
+              color: darkMode ? cream : gray,
+            }}
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <img
               src="../adk.jpeg"
-              className="w-[60px] rounded-full mr-2"
+              className="w-[60px] rounded-full mr-2 border-2 border-white border-solid"
               alt="suny adirondack logo"
             />
           </ListItemIcon>
@@ -69,34 +125,7 @@ const EducationTab = ({ darkMode }: AboutMeTabProps) => {
             }}
           />
         </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <img
-              className="w-[60px] rounded-full mr-2"
-              src="../adabadge.png"
-              alt="ada certificate badge"
-            />
-          </ListItemIcon>
-          <ListItemText
-            primary="Ada Developers Academy, Seattle, WA"
-            secondary={
-              <span className="flex justify-between w-full">
-                Certificate of Achievement
-                <span>2022 - 2023</span>
-              </span>
-            }
-            primaryTypographyProps={{
-              fontFamily: headingFont,
-              fontWeight: "bold",
-              color: darkMode ? lightSage : darkMauve,
-              textTransform: "uppercase",
-            }}
-            secondaryTypographyProps={{
-              fontFamily: headingFont,
-              color: darkMode ? cream : gray,
-            }}
-          />
-        </ListItem>
+
         <Box
           sx={{
             display: "flex",

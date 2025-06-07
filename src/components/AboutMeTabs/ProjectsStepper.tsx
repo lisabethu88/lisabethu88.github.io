@@ -36,12 +36,6 @@ const ProjectsStepper = ({ darkMode }: ProjectsStepperProps) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Box sx={{ width: "100%", minHeight: "375px" }}>
-        <ProjectSlide
-          darkMode={darkMode}
-          projectData={projectsData[activeStep]}
-        />
-      </Box>
       <MobileStepper
         variant="text"
         steps={maxSteps}
@@ -99,6 +93,12 @@ const ProjectsStepper = ({ darkMode }: ProjectsStepperProps) => {
           </Button>
         }
       />
+      <Box sx={{ width: "100%", minHeight: "375px" }}>
+        <ProjectSlide
+          darkMode={darkMode}
+          projectData={projectsData[activeStep]}
+        />
+      </Box>
     </Box>
   );
 };

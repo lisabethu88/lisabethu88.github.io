@@ -9,9 +9,9 @@ export const medSage = "#2b3b54";
 export const medMauve = "#e5ddde";
 export const lightMauve = "#916a6f";
 export const cream = "#f7f5f5";
-export const darkMauve = "#654a4e"; //dark green
-export const forestGreen = "#4A6561"; // darkPink
-export const lightForestGreen = "#d3dedd"; // light pink
+export const darkMauve = "#654a4e";
+export const forestGreen = "#4A6561";
+export const lightForestGreen = "#d3dedd";
 
 export const gray = "rgba(0, 0, 0, 0.6)";
 export const lightGray = "#cfced0";

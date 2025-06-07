@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   cream,
   darkBlue,
   darkMauve,
   forestGreen,
   gold,
-  lightForestGreen,
-  lightMauve,
   lightSage,
   medMauve,
   medSage,
@@ -18,6 +16,8 @@ interface MainProps {
   darkMode: boolean;
 }
 const Main = ({ darkMode }: MainProps) => {
+  const [src, setSrc] = useState("../me-before.png");
+
   return (
     <Box
       component="main"
@@ -35,14 +35,12 @@ const Main = ({ darkMode }: MainProps) => {
         justifyContent: "center",
         alignItems: "flex-start",
         flexWrap: { xs: "wrap", lg: "nowrap" },
-        // overflowY: "scroll",
         gap: { xs: 1, lg: 5 },
         marginBottom: { xs: "50px", lg: 0 },
       }}
     >
       <Box
         sx={{
-          // height: { xs: "fit-content", sm: "100%" },
           marginTop: { xs: "0", lg: "100px" },
           maxWidth: { xs: "150px", sm: "200px", md: "350px" },
           borderRadius: "50%",
@@ -54,25 +52,28 @@ const Main = ({ darkMode }: MainProps) => {
           transition: "0.4s, background-position 0s",
           backgroundSize: "0% 100%",
           backgroundRepeat: "no-repeat",
-          //transition: "0.5s ease-in-out",
-          // backgroundImage: `linear-gradient(180deg, ${
-          //   darkMode ? medSage : forestGreen
-          // }, ${darkMode ? gold : darkMauve})`,
           "&:hover": {
             transition: "0.5s ease-in-out",
-            // // boxShadow: "2px 1px 7px 2px rgba(0, 0, 0, 0.5)",
             backgroundSize: "100% 100%",
             backgroundImage: `linear-gradient(120deg, ${
               darkMode ? lightSage : darkMauve
             }, ${darkMode ? gold : forestGreen})`,
-            transform: "scale(1.1)",
+            transform: "scale(1.1) rotate(360deg)",
+            animation: "spin 3s linear infinite",
+          },
+          "@keyframes spin": {
+            from: { transform: "rotate(0deg)" },
+            to: { transform: "rotate(360deg)" },
           },
         }}
       >
         <img
+          id="self-portrait"
           alt="Woman smiling on a laptop"
-          src={"../mecartoon6.png"}
+          src={src}
           style={{ borderRadius: "50%" }}
+          onMouseOver={() => setSrc("../me-after.png")}
+          onMouseOut={() => setSrc("../me-before.png")}
         />
       </Box>
       <ProfileTabs darkMode={darkMode} />
